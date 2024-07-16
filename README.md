@@ -46,3 +46,8 @@ La API estará disponible en http://127.0.0.1:5000
 - URL: /retrain
 - Método: POST
 - Datos de Entrada: Ninguno.
+
+
+### Enlace a Docker Hub:
+
+https://hub.docker.com/repository/docker/gadesousaa/app-model/general
