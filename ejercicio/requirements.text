@@ -1,0 +1,9 @@
+fastapi
+pickle
+os
+sklearn
+numpy
+pandas
+sqlite3
+uvicorn
+pydantic

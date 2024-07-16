@@ -1,4 +1,3 @@
-from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 import sqlite3
 import pickle
@@ -7,22 +6,23 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import uvicorn
+from fastapi import FastAPI, HTTPException, Depends
 
 
 # Cargar el modelo de machine learning
-MODEL_PATH = "./data/advertising_model.pkl"
+MODEL_PATH = "C:\\Users\\gabod\\OneDrive\\Escritorio\\Model\\ejercicio\\data\\advertising_model.pkl"
 with open(MODEL_PATH, 'rb') as file:
     model = pickle.load(file)
 
 
 # Configuración de la base de datos
-df = pd.read_csv('./data/advertising_clean.csv', index_col=[0])
-conn = sqlite3.connect('Adv_data.db')
+df = pd.read_csv('C:\\Users\\gabod\\OneDrive\\Escritorio\\Model\\ejercicio\\data\\advertising_clean.csv', index_col=[0])
+conn = sqlite3.connect('C:\\Users\\gabod\\OneDrive\\Escritorio\\Model\\ejercicio\\Adv_data.db')
 df.to_sql('Advertising', conn, if_exists='replace', index=False)
 
 app = FastAPI()
 
-conec = sqlite3.connect('Adv_data.db')
+conec = sqlite3.connect('C:\\Users\\gabod\\OneDrive\\Escritorio\\Model\\ejercicio\\Adv_data.db')
 cursor = conec.cursor()
 
 
