@@ -19,7 +19,7 @@ La API estará disponible en http://127.0.0.1:5000
 
 ## Endpoints de la API
 
-- 1. Predicción de Ventas
+1. Predicción de Ventas
 URL: /predict
 Método: POST
 Datos de Entrada: TV, radio y newpaper.
@@ -30,7 +30,7 @@ Ejemplo de Solicitud
   "newpaper": 69.2
 }
 
-- 2. Añadir Datos
+2. Añadir Datos
 URL: /add_data
 Método: POST
 Datos de Entrada: TV, radio, newpaper y sales.
@@ -42,7 +42,7 @@ Ejemplo de Solicitud
   "sales": 10.5
 }
 
-- 3. Reentrenar el Modelo
+3. Reentrenar el Modelo
 URL: /retrain
 Método: POST
 Datos de Entrada: Ninguno.
